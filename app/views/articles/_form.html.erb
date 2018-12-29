@@ -16,6 +16,21 @@
     <%= form.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :published %>
+    <%= form.collection_select :published, [[true, "发布"], [false, "未发布"]], :first, :last %>
+  </div>
+
+  <div class="filed">
+    <%= form.label :category %>
+    <%= form.collection_select :category_id, Category.all, :id, :name %>
+  </div>
+  
   <div class="actions">
     <%= form.submit %>
   </div>
