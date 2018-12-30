@@ -4,6 +4,13 @@
   <strong>Name:</strong>
   <%= @article.name %>
 </p>
+<ul>
+<% @article.comments.each do |article|%>
+  <li>
+    <%= article.name %>
+  </i>
+<% end -%>
+</ul>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
